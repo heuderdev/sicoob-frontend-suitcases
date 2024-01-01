@@ -27,6 +27,6 @@ watch(
   <NavBarComponent :isAuth="isLoggedIn" />
   <div class="container mt-4">
     <RouterView />
-  </div>
+  </div>s
 </template>
 

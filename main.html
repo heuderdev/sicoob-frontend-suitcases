@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Seu Dashboard</title>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen bg-gray-200">
+        <!-- Barra lateral -->
+        <aside class="bg-gray-800 text-gray-500 w-64 flex-shrink-0">
+            <!-- Logo ou título -->
+            <div class="flex items-center justify-center h-16">
+                <span class="text-white text-lg font-semibold">Logo</span>
+            </div>
+
+            <!-- Links da barra lateral -->
+            <nav class="mt-4">
+                <!-- Link do Dashboard -->
+                <a href="#" class="flex items-center py-2 px-4 text-gray-400 hover:text-white">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                    <span class="ml-2">Dashboard</span>
+                </a>
+
+                
+                <!-- Outros links -->
+                <!-- Adicione mais links conforme necessário -->
+
+                <!-- Link de Logout -->
+                <a href="#" class="flex items-center py-2 px-4 mt-4 text-gray-400 hover:text-white">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H3"></path>
+                    </svg>
+                    <span class="ml-2">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="flex-1 overflow-x-hidden overflow-y-auto p-6">
+            <!-- Conteúdo da sua página -->
+            <!-- <h1 class="text-2xl font-semibold">Bem-vindo ao seu Dashboard</h1>
+            <p class="mt-2 text-gray-600">Personalize conforme necessário.</p> -->
+
+            <h1 class="text-2xl font-semibold mb-4">Pesquisar Volume</h1>
+
+            <form action="#" method="GET">
+                <label for="search" class="block text-gray-600 text-sm mb-2">Digite o número do volume:</label>
+                <div class="flex items-center">
+                  <input type="text" id="search" name="search" placeholder="Ex: Volume123" class="flex-1 py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+                  <button type="submit" class="ml-2 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Pesquisar</button>
+                </div>
+              </form>
+              <!--  -->
+              <div class="mt-4"></div>
+              <div class="bg-gray-50 border border-gray-300 rounded-md p-4 mb-4">
+                <!--  -->
+                <div class="flex justify-end mb-2">
+                    <button class="bg-green-500 text-white py-1 px-2 rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600 mr-2 text-xs">Atualizar</button>
+                    <button class="bg-red-500 text-white py-1 px-2 rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600 text-xs">Deletar</button>
+                  </div>
+                <!--  -->
+                <h2 class="text-xl font-semibold mb-2">Resultado da Pesquisa</h2>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="mb-2">
+                    <span class="font-semibold text-gray-600">Campo 1:</span> Valor 1
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-semibold text-gray-600">Campo 2:</span> Valor 2
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-semibold text-gray-600">Campo 3:</span> Valor 3
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-semibold text-gray-600">Campo 4:</span> Valor 4
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-semibold text-gray-600">Campo 5:</span> Valor 5
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-semibold text-gray-600">Campo 6:</span> Valor 6
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+        </main>
+    </div>
+</body>
+</html>

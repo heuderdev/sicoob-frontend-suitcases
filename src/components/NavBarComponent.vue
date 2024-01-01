@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <router-link aria-current="page" class="navbar-brand" to="home">
@@ -31,7 +31,37 @@
             </div>
         </div>
     </nav>
+</template> -->
+
+
+<template>
+    <div class="drawer">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+            <!-- Page content here -->
+            <label for="my-drawer" class="btn btn-accent btn-xs drawer-button m-2">MENU</label>
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+                <!-- Sidebar content here -->
+                <li><a>Sidebar Item 1</a></li>
+                <li><a>Sidebar Item 2</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <span class="dark:text-white">
+          {{ isDark ? "Dark" : "Light" }} Mode
+        </span>
+    <button
+        @click="toggleDark()"
+        class="py-2 px-4 bg-black text-white rounded-md dark:bg-white dark:text-black"
+      >
+        Learn More!
+      </button>
 </template>
+
 
 <script setup>
 import { watch } from "vue"
@@ -41,11 +71,17 @@ import { useRouter } from 'vue-router';
 const route = useRouter()
 const cookies = useCookies(['token']);
 
+import { useDark, useToggle } from "@vueuse/core";
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 
 const logout = () => {
     cookies.remove('token');
     route.push("/")
 }
+
+
 
 
 </script>

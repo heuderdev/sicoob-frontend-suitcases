@@ -1,4 +1,3 @@
-import './assets/main.css'
 import { VueQueryPlugin } from "@tanstack/vue-query";
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -10,12 +9,12 @@ import App from './App.vue'
 import router from './router'
 import "./plugins/axios"
 
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap"
 
 import "vue3-toastify/dist/index.css";
+import './assets/main.css'
 
 const app = createApp(App)
+app.config.globalProperties.$dataTheme = app.config.globalProperties.$dataTheme || { currentTheme: 'dark' };
 
 app.use(createPinia())
 app.use(VueQueryPlugin)
