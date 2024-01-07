@@ -5,6 +5,7 @@ import { RouterView } from 'vue-router'
 import { useCookies } from '@vueuse/integrations/useCookies';
 
 import NavBarComponent from './components/NavBarComponent.vue';
+import InformacaoJumbotronSuitCasesComponent from './components/InformacaoJumbotronSuitCasesComponent.vue';
 const isLoggedIn = ref(false);
 const cookies = useCookies(['token']);
 
@@ -25,8 +26,9 @@ watch(
 <template>
   <!-- <VueQueryDevtools /> -->
   <NavBarComponent :isAuth="isLoggedIn" />
+  <div class="divider"></div>
   <div class="container mt-4">
     <RouterView />
-  </div>s
+  </div>
 </template>
 

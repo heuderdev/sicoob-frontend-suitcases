@@ -4,10 +4,18 @@
             <li class="list-group-item dark" aria-current="true">Olá, Boas-vindas</li>
             <li class="list-group-item">
                 <form @submit.prevent="handleLogin">
-                    <input class="form-control form-control-sm" v-model="loginForm.username" type="text" placeholder="usuário">
-                    <input class="form-control form-control-sm mt-2" v-model="loginForm.password" type="password" placeholder="senha">
-                    <div class="mt-4">
-                        <button type="submit" class="btn btn-secondary btn-sm">Entrar</button> registrar
+                    <div class="form-group">
+
+                        <input class="form-control form-control-sm" v-model="loginForm.username" type="text"
+                            placeholder="usuário">
+                    </div>
+                    <div class="form-group">
+
+                        <input class="form-control form-control-sm mt-2" v-model="loginForm.password" type="password"
+                            placeholder="senha">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-sm">Entrar</button>
                     </div>
                 </form>
             </li>
@@ -52,3 +60,9 @@ const handleLogin = async () => {
     }
 };
 </script>
+
+<style scoped>
+.mt-4 {
+    margin-top: 8px;
+}
+</style>
